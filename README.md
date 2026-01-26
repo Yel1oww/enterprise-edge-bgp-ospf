@@ -12,8 +12,6 @@ Default Route Propagation: Automated internet exit discovery for the Core-Router
 
 Subnetting Strategy: Used /30 point-to-point links for router-to-router connections to conserve IP space.
 
-Troubleshooting Log: Documented recovery from "Gateway of last resort not set" and BGP neighbor synchronization issues.
-
 ## 🗺️ Topology Diagram
 
 ![Network Topology](./topology/network_diagram.png)
