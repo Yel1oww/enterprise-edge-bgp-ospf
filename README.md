@@ -2,7 +2,7 @@
 
 ## 📖 Project Overview
 
-This repository contains a Cisco Packet Tracer simulation of a mid-sized enterprise network. The project demonstrates a production-standard "Single-Homed" edge design, focusing on how internal corporate traffic (OSPF) is handed off to an External Service Provider (BGP) to reach the internet.
+This repository contains a Cisco Packet Tracer simulation of a small enterprise network. The project demonstrates a production-standard "Single-Homed" edge design, focusing on how internal corporate traffic (OSPF) is handed off to an External Service Provider (BGP) to reach the internet.
 
 ## 🏗️ Key Features
 
