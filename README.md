@@ -32,20 +32,20 @@ The ISP-Router peers with the Edge via eBGP, providing a gateway to external net
 
 To prove the network is "Production Ready," the following tests were performed:
 
-1. The Routing Table (Core-Router)
-Running show ip route confirms the Core has learned the path to the internet:
+### 1. The Routing Table (Core-Router)
+Confirmed receipt of the O*E2 default route, ensuring the core knows how to reach the internet.
+* **Command:** `show ip route`
+* **Evidence:** ![Core Routing Table](./docs/Core_Routing_Table.png)
 
-Evidence: O*E2 0.0.0.0/0 [110/1] via 10.1.1.1
+### 2. The BGP Handshake (Edge-Router)
+Confirmed connection to the ISP-Router is established and prefix exchange is active.
+* **Command:** `show ip bgp summary`
+* **Evidence:** ![BGP Status](./docs/BGP_Status.png)
 
-Result: Gateway of Last Resort is correctly set.
-
-2. The BGP Handshake (Edge-Router)
-Running show ip bgp summary confirms the connection to the ISP:
-
-Evidence: Neighbor 192.168.1.1 state shows a prefix count (Established).
-
-3. End-to-End Connectivity (PC0)
-A tracert 192.168.1.1 from the PC shows the exact hop-by-hop path:
+### 3. End-to-End Connectivity (PC0)
+A successful trace from the local PC to the ISP gateway proves the entire routing pipeline is functional.
+* **Command:** `ping 192.168.1.1` or `tracert 192.168.1.1`
+* **Evidence:** ![PC0 Connectivity](./docs/PC0_Connectivity.png)
 
 192.168.10.1 (Core-Router)
 
