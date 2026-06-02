@@ -11,8 +11,10 @@ A Cisco Packet Tracer simulation of a production-standard **Single-Homed Enterpr
 This lab replicates a real-world enterprise edge scenario commonly found in small-to-medium corporate networks. It covers the full routing lifecycle — from a user PC on the internal LAN, through the OSPF domain, across the ASBR handoff, and out via eBGP to the ISP.
 
 ```
-[ PC0 ]──────[ Core-Router ]──────[ Edge-Router (ASBR) ]──────[ ISP-Router ]
-          192.168.10.0/24    OSPF ↔ BGP Redistribution      eBGP AS 65001
+[ PC0 ]──[ Switch ]──[ Core-Router ]──────────[ Edge-Router ]──────────[ ISP-Router ]
+           2960-24TT    ISR4331      10.1.1.0/30  ISR4331   192.168.1.0/30  ISR4331
+        192.168.10.0/24  (.2)──────────(.1)         (.2)──────────(.1)
+                         └───── OSPF Area 0 ────────┘  └──── eBGP AS 65001 ────┘
 ```
 
 ---
