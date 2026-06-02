@@ -32,12 +32,13 @@ This lab replicates a real-world enterprise edge scenario commonly found in smal
 
 ![Network Topology](./topology/network_diagram.png)
 
-| Device | Role | Key Interface(s) |
-| :--- | :--- | :--- |
-| **PC0** | End-user host | `192.168.10.x/24` |
-| **Core-Router** | Internal gateway, OSPF speaker | LAN: `192.168.10.1`, WAN: `10.1.1.2/30` |
-| **Edge-Router** | ASBR — OSPF ↔ eBGP boundary | Internal: `10.1.1.1/30`, External: `192.168.1.2/30` |
-| **ISP-Router** | eBGP peer, internet gateway | `192.168.1.1/30` |
+| Device | Model | Role | Key Interface(s) |
+| :--- | :--- | :--- | :--- |
+| **PC0** | PC-PT | End-user host | `192.168.10.x/24` |
+| **Switch** | 2960-24TT | Layer 2 access switch | LAN segment `192.168.10.0/24` |
+| **Core-Router** | ISR4331 | Internal gateway, OSPF speaker | LAN: `192.168.10.1`, WAN: `10.1.1.2/30` |
+| **Edge-Router** | ISR4331 | ASBR — OSPF ↔ eBGP boundary | Internal: `10.1.1.1/30`, External: `192.168.1.2/30` |
+| **ISP-Router** | ISR4331 | eBGP peer, simulated internet gateway | `192.168.1.1/30` |
 
 ---
 
